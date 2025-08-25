@@ -1,4 +1,53 @@
 # 🚍 AutocarZ - 자율주행 중 로드킬 안전 강화 및 자동 신고 서비스
+<<<<<<< HEAD
+=======
+
+# 🙋‍♂️🙋‍♀️ 팀원 소개
+
+<table>
+  <tr>
+    <th>김지영</th>
+    <th>이유석</th>
+    <th>사석훈</th>
+    <th>신윤서</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/3c347b94-3b95-4d42-82ea-ee20c7dfcc45" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/44c93308-1e79-4dc5-8ac0-a2dbd30785e8" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/26c18044-d8ab-4b8b-a5a9-fb6ccd8b1071" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/9b3cd675-6764-4b3e-bca3-7a356b20843f" width="100"/></td>
+  </tr>
+  <tr>
+    <td>PM<br>임베디드 시스템 개발자<br>분석가</td>
+    <td>팀원<br>임베디드 시스템 개발자<br>분석가</td>
+    <td>팀원<br>Full-Stack 개발자<br>분석가</td>
+    <td>팀원<br>FrontEnd<br>분석가</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/jiyoung1634">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/LYSS-LGU">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/Clear-head">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/irisyshin">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
+>>>>>>> 060b2669514999ccec7337fb4352ab530d359537
 
 # 🙋‍♂️🙋‍♀️ 팀원 소개
 
@@ -61,8 +110,12 @@
 ## 2. 주요 내용
 - **프로젝트 기간**: 2025-08-25 ~ 2025-08-29
 - **참여 인원**: [팀원 소개] 참고
+<<<<<<< HEAD
 - **데이터 사용처**: [로드킬 데이터 정보](https://www.data.go.kr/data/15045544/fileData.do), [야생동물 활동 영상 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?pageIndex=1&currMenu=115&topMenu=100&srchOptnCnd=OPTNCND001&searchKeyword=%EB%A1%9C%EB%93%9C%ED%82%AC&srchDetailCnd=DETAILCND001&srchOrder=ORDER001&srchPagePer=20&aihubDataSe=data&dataSetSn=645)
 
+=======
+- **데이터 사용처**: [데이터 출처]
+>>>>>>> 060b2669514999ccec7337fb4352ab530d359537
 
 ## 3. 일정 계획
 ![Gantt 차트]
