@@ -1,5 +1,50 @@
-# 2nd-template
-whynotsw-camp 2nd-template 레포지토리입니다.
+# 🚍 AutocarZ - 자율주행 중 로드킬 안전 강화 및 자동 신고 서비스
+
+# 🙋‍♂️🙋‍♀️ 팀원 소개
+
+<table>
+  <tr>
+    <th>김지영</th>
+    <th>이유석</th>
+    <th>사석훈</th>
+    <th>신윤서</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/3c347b94-3b95-4d42-82ea-ee20c7dfcc45" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/44c93308-1e79-4dc5-8ac0-a2dbd30785e8" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/26c18044-d8ab-4b8b-a5a9-fb6ccd8b1071" width="100"/></td>
+    <td><img src="https://github.com/user-attachments/assets/9b3cd675-6764-4b3e-bca3-7a356b20843f" width="100"/></td>
+  </tr>
+  <tr>
+    <td>PM<br>임베디드 시스템 개발자<br>분석가</td>
+    <td>팀원<br>임베디드 시스템 개발자<br>분석가</td>
+    <td>팀원<br>Full-Stack 개발자<br>분석가</td>
+    <td>팀원<br>FrontEnd<br>분석가</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/jiyoung1634">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/LYSS-LGU">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/Clear-head">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/irisyshin">
+        <img src="https://img.shields.io/badge/GitHub-Link-black?logo=github&style=flat"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 ----------------------------
 
@@ -10,15 +55,17 @@ whynotsw-camp 2nd-template 레포지토리입니다.
 # 프로젝트 기획서
 
 ## 1. 프로젝트 정의
-- **목표**: 상담 이력 데이터를 활용한 [목표] 도출
+- **목표**: **AI기반 자율주행 안전 강화 솔루션 설계**
 - **주요 기능**:
   - 데이터 수집 및 전처리
-  - 데이터 시각화 및 보고
+  - 차선 인식·주행 제어
+  - 야생동물/장애물 실시간 감지
+  - 성능 평가 및 리포트 자동화
 
 ## 2. 주요 내용
-- **프로젝트 기간**: YYYY-MM-DD ~ YYYY-MM-DD
-- **참여 인원**: [팀원 이름]
-- **데이터 사용처**: [데이터 출처]
+- **프로젝트 기간**: 2025-08-25 ~ 2025-08-29
+- **참여 인원**: [팀원 소개] 참고
+- **데이터 사용처**: [데이터 출처] 데이터
 
 ## 3. 일정 계획
 ![Gantt 차트]
