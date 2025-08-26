@@ -166,10 +166,45 @@
 
 ## 1. 데이터 아키텍처
 
-- **설계 개요**:
-  - 데이터 수집: [수집 방식]
-  - 데이터 저장: [저장 방식]
-  - 분석 및 시각화: [사용 기술]
+![ERD](image-3.png)
+
+```sql
+Table Event {
+  event_id varchar(255) [pk, note: '이벤트의 고유 식별자 (기본 키)']
+  lat float [note: '이벤트 발생 위치의 위도']
+  lon float [note: '이벤트 발생 위치의 경도']
+  time datetime [note: '이벤트 발생 시간']
+  direction boolean [note: '상행/하행 정보']
+  line varchar(255) [note: '관련 노선 정보']
+  detected_obj_id varchar(255) [note: '감지된 객체의 ID (Object 테이블 참조)']
+  status int [note: '객체의 상태 (예: 0-정상, 1-주의, 2-경고)']
+  car_id varchar(255) [note: '이벤트를 감지한 차량의 ID (Car 테이블 참조)']
+}
+
+// Object: 감지될 수 있는 객체의 종류를 정의하는 테이블
+Table Object {
+  object_id varchar(255) [pk, note: '객체의 고유 식별자 (기본 키)']
+  object_name varchar(255) [note: '객체의 이름 (예: 사람, 자전거, 오토바이)']
+}
+
+// Car: 시스템에 등록된 차량 정보를 저장하는 테이블
+Table Car {
+  car_id varchar(255) [pk, note: '차량의 고유 식별자 (기본 키)']
+  car_number varchar(125) [note: '차량 번호']
+}
+
+
+// ## 관계 정의 ##
+
+// Event 테이블과 Object 테이블의 관계 설정 (일대다 관계)
+// 하나의 Object는 여러 Event에서 감지될 수 있습니다.
+Ref: Event.detected_obj_id > Object.object_id
+
+// Event 테이블과 Car 테이블의 관계 설정 (일대다 관계)
+// 하나의 Car는 여러 Event를 감지할 수 있습니다.
+Ref: Event.car_id > Car.car_id
+```
+
 
 ## 2. 기술 스택
 
@@ -231,7 +266,7 @@
 
 ### 2-2 시스템 흐름도
 
-## ![시스템 흐름도](image-1.png)
+## ![시스템 흐름도](image-2.png)
 
 # 시각화 리포트
 
