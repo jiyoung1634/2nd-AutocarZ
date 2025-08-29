@@ -204,7 +204,9 @@ Ref: Event.car_id > Car.car_id
 
 ## 2. 기술 스택
 
-- 사용 언어 : ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+- 사용 언어 : ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) 
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=C&logoColor=white)
 
 
 ### **📊 데이터 분석 및 처리**
@@ -218,11 +220,14 @@ Ref: Event.car_id > Car.car_id
 - 모델 : ![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=flat&logo=YOLO&logoColor=black) ![ResNet50](https://img.shields.io/badge/ResNet50-FF5959?style=flat)
 - 프레임워크 : ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
 -  머신러닝 : ![Scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+-  하드웨어: ![arduino](https://img.shields.io/badge/arduino-00878F?style=flat&logo=arduino&logoColor=white)
+![raspberrypi](https://img.shields.io/badge/raspberrypi-A22846?style=flat&logo=raspberrypi&logoColor=white)
 
 ### 🗃️ 인프라 & 배포 & 서버
 - 클라우드 : ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white) ![EC2](https://img.shields.io/badge/EC2-FF9900?style=flat&logo=amazon-ec2&logoColor=white)
 - 데이터베이스 : <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" />
 - 서버 : ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+  
 
 
 
