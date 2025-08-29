@@ -161,7 +161,8 @@
 
 ## 1. 데이터 아키텍처
 
-![ERD](image-3.png)
+<img width="1300" height="615" alt="image" src="https://github.com/user-attachments/assets/e8e0d0fa-60d8-4874-881d-f90804542438" />
+
 
 ```sql
 Table Event {
