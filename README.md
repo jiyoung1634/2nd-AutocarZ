@@ -279,7 +279,7 @@ Ref: Event.car_id > Car.car_id
 
 ## 2. 대시보드
 
-![대시보드 스크린샷]<img width="1105" height="528" alt="image" src="https://github.com/user-attachments/assets/25f55038-564f-4707-aab1-89c4ab98cf11" />
+<img width="1105" height="528" alt="image" src="https://github.com/user-attachments/assets/25f55038-564f-4707-aab1-89c4ab98cf11" />
 
 
 ## 3. 제안
