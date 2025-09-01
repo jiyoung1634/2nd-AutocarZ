@@ -239,55 +239,21 @@ Table Alert {
 - 서버 : ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
   
 
-
-
 ---
 
-# 데이터 연동 정의서
 
-## 1. 데이터 정의
+# 설계 이미지
 
-- 데이터 소스: 상담 이력 데이터
-- 주요 컬럼:
-  - user_id: 사용자 ID
-  - timestamp: 상담 시간
-  - feedback: 상담 내용
-
-## 2. 연동 방식
-
-- 연동 방식: API 또는 Batch 수집
-- 연동 주기: 매일 자정
-
----
-
-# 클라우드 아키텍처 설계서
-
-## 1. 아키텍처 개요
-
-- **사용 서비스**:
-  - AWS S3: 데이터 저장소
-  - AWS Lambda: 데이터 처리
-  - AWS QuickSight: 대시보드
-
-## 2. 설계 이미지
-
-### 2-1. 시스템 아키텍처
+## 2-1. 시스템 아키텍처
 
 ![시스템 아키텍처](image.png)
 
-### 2-2 시스템 흐름도
+## 2-2 시스템 흐름도
 
 ## ![시스템 흐름도](image-2.png)
 
-# 시각화 리포트
 
-## 1. 분석 결과 요약
-
-- 상담 이력 데이터 분석 결과:
-  - 주요 패턴: [결과 요약]
-  - 통계적 분석 결과: [결과 요약]
-
-## 2. 대시보드
+## 2-3 대시보드
 
 <img width="1105" height="528" alt="image" src="https://github.com/user-attachments/assets/25f55038-564f-4707-aab1-89c4ab98cf11" />
 
