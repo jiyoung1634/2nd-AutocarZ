@@ -167,38 +167,67 @@
 ```sql
 Table Event {
   event_id varchar(255) [pk, note: '이벤트의 고유 식별자 (기본 키)']
-  lat float [note: '이벤트 발생 위치의 위도']
-  lon float [note: '이벤트 발생 위치의 경도']
-  time datetime [note: '이벤트 발생 시간']
+  lat float [not null, note: '이벤트 발생 위치의 위도']
+  lon float [not null, note: '이벤트 발생 위치의 경도']
+  detection_time datetime [not null, note: '이벤트 발생 시간']
   direction boolean [note: '상행/하행 정보']
-  line varchar(255) [note: '관련 노선 정보']
-  detected_obj_id varchar(255) [note: '감지된 객체의 ID (Object 테이블 참조)']
-  status int [note: '객체의 상태 (예: 0-정상, 1-주의, 2-경고)']
-  car_id varchar(255) [note: '이벤트를 감지한 차량의 ID (Car 테이블 참조)']
+  line_info varchar(255) [note: '관련 노선 정보 (e.g., 경부고속도로)']
+  car_id varchar(255) [ref: > Car.car_id, note: '이벤트를 감지한 차량의 ID (Car 테이블 참조)']
+  object_id varchar(255) [ref: > Object.object_id, note: '감지된 객체 ID (Object 테이블 참조)']
 }
 
 // Object: 감지될 수 있는 객체의 종류를 정의하는 테이블
 Table Object {
   object_id varchar(255) [pk, note: '객체의 고유 식별자 (기본 키)']
-  object_name varchar(255) [note: '객체의 이름 (예: 사람, 자전거, 오토바이)']
+  object_name varchar(255) [not null, note: '객체의 이름 (예: 고라니, 고양이, 낙하물)']
+  risk_level int [note: '위험도 (1: 낮음, 2:보통, 3: 높음)']
 }
 
 // Car: 시스템에 등록된 차량 정보를 저장하는 테이블
 Table Car {
   car_id varchar(255) [pk, note: '차량의 고유 식별자 (기본 키)']
-  car_number varchar(125) [note: '차량 번호']
+  car_number varchar(125) [unique, not null, note: '차량 번호']
+  car_type varchar(50) [note: '차종 (e.g., 승용차, 트럭, 버스)']
 }
 
+// ========================================
+// 신고 및 알림 처리
+// ========================================
 
-// ## 관계 정의 ##
+// Report: 감지 이벤트를 기반으로 생성되는 신고 정보
+Table Report {
+  report_id varchar(255) [pk, note: '신고의 고유 식별자 (기본 키)']
+  event_id varchar(255) [unique, ref: > Event.event_id, note: '원본 이벤트 ID']
+  report_time datetime [not null, note: '신고 접수 시간']
+  status report_status [not null, default: 'received', note: '신고 처리 상태']
+  report_image_url varchar(255) [note: '증빙 객체 이미지 URL']
+}
 
-// Event 테이블과 Object 테이블의 관계 설정 (일대다 관계)
-// 하나의 Object는 여러 Event에서 감지될 수 있습니다.
-Ref: Event.detected_obj_id > Object.object_id
+// Authority: 신고를 전달받는 관계 기관 정보
+Table Authority {
+  authority_id varchar(255) [pk, note: '기관의 고유 식별자 (기본 키)']
+  name varchar(225) [not null, note: '기관명 (e.g., 한국도로공사, 서초구청)']
+  type authority_type [not null, note: '기관 종류']
+  contact varchar(255) [note : '연락처 또는 API Endpoint']
+}
 
-// Event 테이블과 Car 테이블의 관계 설정 (일대다 관계)
-// 하나의 Car는 여러 Event를 감지할 수 있습니다.
-Ref: Event.car_id > Car.car_id
+// ReportForwarding: 특정 신고가 어떤 기관에 전달되었는지 기록 (N:M 관계)
+Table ReportForwarding {
+  forwarding_id varchar(255) [pk, note: '전달 내역 고유 식별자 (기본 키)']
+  report_id varchar(255) [ref: > Report.report_id, not null]
+  authority_id varchar(255) [ref: > Authority.authority_id, not null]
+  forwarding_time datetime [not null, note: '기관에 전달된 시간']
+}
+
+// Alert: 인근 운전자에게 발송되는 알림 정보
+Table Alert {
+  alert_id varchar(255) [pk, note: '알림의 고유 식별자 (기본 키)']
+  report_id varchar(255) [ref: > Report.report_id, not null, note: '어떤 신고에 대한 알림인지']
+  target_car_id varchar(255) [ref: > Car.car_id, not null, note: '알림을 수신한 차량 ID']
+  alert_time datetime [not null, note: '알림 발송 시간']
+  is_checked boolean [default: false, note: '수신 차량의 확인 여부']
+}
+
 ```
 
 
